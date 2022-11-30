@@ -4,7 +4,8 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    background-color: #eef0ef;
+    background: rgba(0, 0, 0, 0.322);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.849));
 }
 .form-container{
     width: 650px;

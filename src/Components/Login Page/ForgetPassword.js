@@ -27,7 +27,7 @@ function ForgetPassword() {
         <div className="container-grey">
             <div className="form-container">
                 <div className='h1Box'>
-                    <h1 className='h1'>FORGET PASSWORD</h1>
+                    <h1 className='forg'>FORGET PASSWORD</h1>
                     <div className="line"></div>
                 </div>
                 <div className="loginBox">

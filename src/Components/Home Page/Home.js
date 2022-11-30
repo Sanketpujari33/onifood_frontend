@@ -44,7 +44,7 @@ function Home() {
                             <h3 className="h3">365 DAYS/YEAR</h3>
                         </div>
                         <div className='fsummary'>
-                            <p className='para'>
+                            <p className='para1'>
                                 Never cook again! We really mean that. Our subscription plans include up to 365 days/year of coverage and you can also choose to order more flexibly if that is your style.
                             </p>
                         </div>
@@ -57,7 +57,7 @@ function Home() {
                             <h3 className="h3">30 MINUTES OR FREE</h3>
                         </div>
                         <div className='fsummary'>
-                            <p className='para'>
+                            <p className='para1'>
                                 You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
                             </p>
                         </div>
@@ -70,7 +70,7 @@ function Home() {
                             <h3 className="h3">100% ORGANIC</h3>
                         </div>
                         <div className='fsummary'>
-                            <p className='para'>
+                            <p className='para1'>
                                 All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
                             </p>
                         </div>

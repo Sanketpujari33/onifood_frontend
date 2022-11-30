@@ -12,14 +12,14 @@ function AuthProvider({ children }) {
     const [user, userSet] = useState("");
     const [loading, setLoading] = useState(false);
 
-    async function signUp(name,email,password,confirmPassword) {
+    async function signUp(name, email, password, confirmPassword) {
         const data = await axios.post("/user/signup", {
-            name:name,
+            name: name,
             email: email,
             password: password,
-            confirmPassword:confirmPassword
+            confirmPassword: confirmPassword
         });
-        console.log(data,user);
+        console.log(data, user);
         userSet(user);
     }
     async function login(email, password) {
@@ -28,7 +28,7 @@ function AuthProvider({ children }) {
                 email: email,
                 password: password
             });
-            console.log("dataaa",data.data);
+            console.log("dataaa", data.data);
             userSet(data.data);
             localStorage.setItem("user", JSON.stringify(data.data));
             return data;
@@ -46,7 +46,6 @@ function AuthProvider({ children }) {
 
     useEffect(async () => {
         let data = localStorage.getItem("user");
-        console.log(data,898787);
         if (data) {
             userSet(JSON.parse(data));
             console.log(user);

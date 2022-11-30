@@ -6,7 +6,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #eef0ef;
+    background: rgba(0, 0, 0, 0.322);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.849));
 }
 
 .allplanDetails {

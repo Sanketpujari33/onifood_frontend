@@ -26,7 +26,7 @@ function Signup(props) {
         <div className="container-grey">
             <div className="form-container">
                 <div className='h1Box'>
-                    <h1 className='h1'>SIGN UP</h1>
+                    <h1 className='sig'>SIGN UP</h1>
                     <div className="line"></div>
                 </div>
                 <div className="loginBox">
