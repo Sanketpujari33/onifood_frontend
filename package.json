@@ -1,8 +1,6 @@
 {
-  "homepage": "http://onifood.herokuapp.com/",
   "name": "onifood",
   "version": "1.0.0",
-  "proxy":"http://onifood.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.4.1",
@@ -33,7 +31,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "production": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider  node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
