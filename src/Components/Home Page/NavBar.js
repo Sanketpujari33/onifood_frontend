@@ -22,15 +22,21 @@ function NavBar() {
     
     return (
         <header>
-        <div class="brand"><p>Onifood</p></div>
+        <div className="brand"><p>Onifood</p></div>
         <nav>
             <div className="menu">
             <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/allPlans">Plans</Link></li>
-                    {user ?<>{console.log(user)}
-                    <li><Link to="/profilePage">{user?.data?.name}</Link></li>
-                    <li><Link to="" onClick={logout}>Logout</Link></li></>:
+                    {user ?
+                    
+                    <>
+                    {console.log(user)}
+                        <li>
+                            <Link to="/profilePage">{user?.data?.name}</Link>
+                    </li>
+                    <li><Link to="" onClick={logout}>Logout</Link></li>
+                    </>:
                     <li><Link to="/login">Login</Link></li> }
                 </ul>
             </div>

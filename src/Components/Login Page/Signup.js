@@ -1,6 +1,5 @@
 import React, { useState , useContext } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
-import axios from 'axios';
 import '../Styles/login.css';
 import { useHistory } from 'react-router-dom';
 

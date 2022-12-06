@@ -8,8 +8,7 @@ function Review() {
 
     useEffect(async () => {
         try {
-            const data = await axios.get("/review/top3");
-            console.log(data);
+            const data = await axios.get("http://localhost:5000/review/top3");
             setarr(data.data.data);
             // console.log(data.data.length);
         } catch (err) {

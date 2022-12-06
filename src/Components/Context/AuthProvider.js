@@ -13,7 +13,7 @@ function AuthProvider({ children }) {
     const [loading, setLoading] = useState(false);
 
     async function signUp(name, email, password, confirmPassword) {
-        const data = await axios.post("/user/signup", {
+        const data = await axios.post("http://localhost:5000/user/signup", {
             name: name,
             email: email,
             password: password,
@@ -24,12 +24,14 @@ function AuthProvider({ children }) {
     }
     async function login(email, password) {
         try {
-            const data = await axios.post("/user/login", {
+            const data = await axios.post("http://localhost:5000/user/login", {
                 email: email,
                 password: password
             });
-            console.log("dataaa", data.data);
+
+            console.log("data", data.data);
             userSet(data.data);
+
             localStorage.setItem("user", JSON.stringify(data.data));
             return data;
         }
@@ -38,14 +40,13 @@ function AuthProvider({ children }) {
         }
     }
     async function logout() {
-        localStorage.removeItem("user")
-        const data = await axios.get("/user/logout");
+        localStorage.getItem("user");
+        const data = await axios.get("http://localhost:5000/user/logout");
         console.log(data);
         userSet(null);
     }
-
     useEffect(async () => {
-        let data = localStorage.getItem("user");
+            let data=localStorage.removeItem("user")
         if (data) {
             userSet(JSON.parse(data));
             console.log(user);
@@ -56,6 +57,7 @@ function AuthProvider({ children }) {
     }, [])
 
     const value = {
+        
         user,
         login,
         signUp,
@@ -65,7 +67,7 @@ function AuthProvider({ children }) {
     return (
         <AuthContext.Provider value={value} >
             {!loading && children}
-        </AuthContext.Provider >
+        </AuthContext.Provider>
     )
 }
 

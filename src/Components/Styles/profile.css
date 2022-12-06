@@ -6,8 +6,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #eef0ef;
+    color: #6e6e6e;
+    background-color: #9aa29e;
 }
+.h1{
+    color: #6e6e6e;
+}
+
 .profileDetails{
     height: 80%;
     width: 40%;
@@ -65,7 +70,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: antiquewhite; */
+    background-color: antiquewhite;
 }
 .profdetail button{
     height: 80%;

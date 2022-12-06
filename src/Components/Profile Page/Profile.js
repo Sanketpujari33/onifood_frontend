@@ -17,7 +17,7 @@ function Profile() {
         passwordSet(user.password)
         emailSet(user.email)
         passwordCnfSet(user.password)
-        console.log("abcd",user)
+        // console.log("abcd",user)
     },[]);
     // console.log("typeof user is ",(user));
     const [password, passwordSet] = useState()
@@ -25,12 +25,12 @@ function Profile() {
     const [email, emailSet] = useState("");
     const [name, nameSet] = useState("");
     const nameEdit = async () => {
-        await axios.patch('/user/login');
+        await axios.patch('http://localhost:5000/user/login');
     }
     const handleClick = async () => {
         try {
             console.log(user._id);
-            const data = await axios.patch("/user/" + user._id, {
+            const data = await axios.patch("http://localhost:5000/user/" + user._id, {
                email,
                 name,
                 password,
@@ -52,7 +52,8 @@ function Profile() {
                     <h1 className='h1'>Profile</h1>
                     <div className="line"></div>
                     <div className="profileImage">
-                        {/* {<img src={user.user.profileImage} /> } */}
+                        {/* {<img src={user.user.profileImage} />
+                         } */}
                     </div>
                 </div>
                 <div className="loginBox">

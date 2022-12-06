@@ -9,8 +9,7 @@ function Plans() {
 
     useEffect(async () => {
         try {
-            const data = await axios.get("/plans/top3");
-            console.log(data,23443);
+            const data = await axios.get("http://localhost:5000/plans/top3");
             arrset(data.data.data);
             
         } catch (err) {

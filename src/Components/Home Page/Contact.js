@@ -57,7 +57,7 @@ function Contact() {
                             Terms Conditions</span>
                     </div>
                     <div className="sendBtn">
-                        <Link to="#" className=" btn-full form-button">SEND</Link   >
+                        <Link to="#" className=" btn-full form-button">SEND</Link>
                     </div>
                 </div>
             </div>
