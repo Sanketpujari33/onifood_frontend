@@ -12,26 +12,24 @@ function AuthProvider({ children }) {
     const [user, userSet] = useState("");
     const [loading, setLoading] = useState(false);
 
-    async function signUp(name, email, password, confirmPassword) {
-        const data = await axios.post("http://localhost:5000/user/signup", {
-            name: name,
+    async function signUp(name,email,password,confirmPassword) {
+        const data = await axios.post("/user/signup", {
+            name:name,
             email: email,
             password: password,
-            confirmPassword: confirmPassword
+            confirmPassword:confirmPassword
         });
-        console.log(data, user);
+        console.log(data,user);
         userSet(user);
     }
     async function login(email, password) {
         try {
-            const data = await axios.post("http://localhost:5000/user/login", {
+            const data = await axios.post("/user/login", {
                 email: email,
                 password: password
             });
-
-            console.log("data", data.data);
+            console.log("dataaa",data.data);
             userSet(data.data);
-
             localStorage.setItem("user", JSON.stringify(data.data));
             return data;
         }
@@ -40,13 +38,15 @@ function AuthProvider({ children }) {
         }
     }
     async function logout() {
-        localStorage.getItem("user");
-        const data = await axios.get("http://localhost:5000/user/logout");
+        localStorage.removeItem("user")
+        const data = await axios.get("/user/logout");
         console.log(data);
         userSet(null);
     }
+
     useEffect(async () => {
-            let data=localStorage.removeItem("user")
+        let data = localStorage.getItem("user");
+        console.log(data,898787);
         if (data) {
             userSet(JSON.parse(data));
             console.log(user);
@@ -57,7 +57,6 @@ function AuthProvider({ children }) {
     }, [])
 
     const value = {
-        
         user,
         login,
         signUp,
@@ -65,9 +64,9 @@ function AuthProvider({ children }) {
     }
 
     return (
-        <AuthContext.Provider value={value} >
+        < AuthContext.Provider value={value} >
             {!loading && children}
-        </AuthContext.Provider>
+        </AuthContext.Provider >
     )
 }
 

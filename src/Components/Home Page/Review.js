@@ -8,7 +8,7 @@ function Review() {
 
     useEffect(async () => {
         try {
-            const data = await axios.get("http://localhost:5000/review/top3");
+            const data = await axios.get("/review/top3");
             setarr(data.data.data);
             // console.log(data.data.length);
         } catch (err) {
@@ -27,7 +27,6 @@ function Review() {
                     {
                         arr && arr?.map((ele, key) =>
                             <div className="rCard" key={key}>
-                                {console.log("ele in review.js",ele)}
                                 <div className='rimage'>
                                     <img alt='' src={ele.user.profileImage} className='img' />
                                 </div>
@@ -35,7 +34,7 @@ function Review() {
                                     <h3 className="rh3">{ele.user.name}</h3>
                                 </div>
                                 <div className='rsummary'>
-                                    <p className='para'>
+                                    <p className='parSRS'>
                                         {ele.review}
                                     </p>
                                 </div>

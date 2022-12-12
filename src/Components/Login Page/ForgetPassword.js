@@ -12,7 +12,7 @@ function ForgetPassword() {
 
     const handleForgetPassword=async()=>{
         try{
-            const data=await axios.post("http://localhost:5000/user/forgetpassword",{
+            const data=await axios.post("/user/forgetpassword",{
                 email:email
             });
             history.push("/resetpassword")

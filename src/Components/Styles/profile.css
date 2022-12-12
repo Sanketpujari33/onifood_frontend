@@ -14,8 +14,9 @@
 }
 
 .profileDetails{
-    height: 80%;
-    width: 40%;
+    height: 100%;
+    width: 100%;
+   
 }
 .profileImg{
     height: 50%;
@@ -24,6 +25,7 @@
     justify-content: center;
     margin-top: 10px;
     align-items: center;
+    background-color: #302f2f;
 }
 .profileImg img{
     max-height: 100%;

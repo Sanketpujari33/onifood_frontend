@@ -32,6 +32,9 @@
     transition: 0.3s;
     border: 1px solid #6e6e6e;
 }
+.h1plane{
+    color: #eef0ef;
+}
 .apbtn{
     position: relative;
     top: 15%;

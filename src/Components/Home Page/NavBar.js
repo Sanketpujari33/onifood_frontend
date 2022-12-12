@@ -22,7 +22,7 @@ function NavBar() {
     
     return (
         <header>
-        <div className="brand"><p>Onifood</p></div>
+        <div className="brand"><Link to="/">Onifood</Link></div>
         <nav>
             <div className="menu">
             <ul>

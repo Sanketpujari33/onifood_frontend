@@ -25,12 +25,12 @@ function Profile() {
     const [email, emailSet] = useState("");
     const [name, nameSet] = useState("");
     const nameEdit = async () => {
-        await axios.patch('http://localhost:5000/user/login');
+        await axios.patch('/user/login');
     }
     const handleClick = async () => {
         try {
             console.log(user._id);
-            const data = await axios.patch("http://localhost:5000/user/" + user._id, {
+            const data = await axios.patch("/user/" + user._id, {
                email,
                 name,
                 password,
@@ -44,7 +44,6 @@ function Profile() {
             console.log(error);
         }
     }
-    console.log(user);
     return (
         <div className="container-grey">
             <div className="form-container">
@@ -52,8 +51,8 @@ function Profile() {
                     <h1 className='h1'>Profile</h1>
                     <div className="line"></div>
                     <div className="profileImage">
-                        {/* {<img src={user.user.profileImage} />
-                         } */}
+                   {/* <img src={user.profileImage}/> */}
+                   <img src={user.profileImage}/>
                     </div>
                 </div>
                 <div className="loginBox">

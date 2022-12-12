@@ -8,9 +8,11 @@ function AllPlans() {
     const [arr, arrset] = useState([]);
     useEffect(async () => {
         try {
-            const data = await axios.get("http://localhost:5000/plans/allPlans");
+            const data = await axios.get("/plans/allPlans");
             console.log(data.data);
             arrset(data.data.data);
+            // console.log(data.data.data);
+            
         } catch (err) {
             console.log(err);
         }
@@ -18,7 +20,7 @@ function AllPlans() {
     return (
         <div className='allplansCard'>
             <div className='h1Box'>
-                <h1 className='h1'>START EATING HEALTHY TODAY</h1>
+                <h1 className='h1plane'>START EATING HEALTHY TODAY</h1>
                 <div className="line"></div>
             </div>
             <div className='allplanDetails'>

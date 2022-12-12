@@ -15,36 +15,38 @@ function PlanDetail() {
     console.log(id);
     useEffect(async () => {
         console.log("inside useeffect");
-        const data = await axios.get("/plans/plan/"+id)
+        const data = await axios.get("/plans/plan/"+id);
         console.log(data,565785765);
         delete data.data.data["_id"]
         delete data.data.data["__v"]
         setplan(data.data.data)
         const reviews = await axios.get("/review/"+id);
-        // console.log(reviews);
+        console.log(reviews);
         console.log(reviews.data.data);
         setarr(reviews.data.data)
         // console.log(arr);
-    }, [])
+    }, []);
 
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    console.log(rate);
+  
     // console.log("user ",user);
     const handleClick = async () => {
         console.log(123645);
+        console.log("user ",user.data._id);
         const data = await axios.post("/review/crud/"+id, {
             "review": review,
             "rating": rate,
             "user": user.data._id,
             "plan": id
         })
-        console.log(data);
+        console.log("reve data"+data);
         const reviews = await axios.get("/review/" + id);
         // console.log(reviews);
         setarr(reviews.data.data);
     }
+    console.log("rate",rate);
     const handleDelete = async(reviewId) =>{
         try{
            
@@ -125,4 +127,4 @@ function PlanDetail() {
     )
 }
 
-export default PlanDetail;
+export default PlanDetail
