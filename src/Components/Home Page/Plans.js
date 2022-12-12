@@ -20,7 +20,7 @@ function Plans() {
     return (
         <div className='plansCard'>
             <div className='h1Box'>
-                <h1 className='h1'>START EATING HEALTHY TODAY</h1>
+                <h1 className='heading'>START EATING HEALTHY TODAY</h1>
                 <div className="line"></div>
             </div>
             <div className='planDetails'>

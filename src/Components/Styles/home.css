@@ -123,14 +123,14 @@
     flex-direction: column;
 }
 
-.h1 {
+.heading {
     height: 80%;
     width: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     font-size: 38px;
-    color: #ffffff;
+    color: #fff;
     /* background-color: aquamarine; */
 }
 

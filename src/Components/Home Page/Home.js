@@ -32,7 +32,7 @@ function Home() {
             </div>
             <div className="featureCard">
                 <div className='h1Box'>
-                    <h1 className='h1'>AWESOME FEATURES</h1>
+                    <h1 className='heading'>AWESOME FEATURES</h1>
                     <div className="line"></div>
                 </div>
                 <div className="fDetail">
@@ -79,7 +79,7 @@ function Home() {
             </div>
             <div className='stepsCard'>
                 <div className='h1Box'>
-                    <h1 className='h1'>STEPS TO FOLLOW</h1>
+                    <h1 className='heading'>STEPS TO FOLLOW</h1>
                     <div className="line"></div>
                 </div>
                 <div className="fDetail">

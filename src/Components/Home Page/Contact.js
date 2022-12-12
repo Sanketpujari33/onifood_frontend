@@ -7,7 +7,7 @@ function Contact() {
     return (
         <div className='contactCard'>
             <div className='h1Box'>
-                    <h1 className='h1'>CONTACT US</h1>
+                    <h1 className='heading'>CONTACT US</h1>
                     <div className="line"></div>
                 </div>
             
